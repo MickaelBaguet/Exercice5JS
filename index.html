@@ -15,17 +15,23 @@
         <script type="text/javascript">
           function multiEntier()
           {
-            // Première méthode : action détaillé ligne par ligne (avec alert pour vérifié)
-            var nb = firstNumber.value;
-            alert(firstNumber.value);
-            // Utilisation du Math.trunc() pour garder la partie entière du nombre
-            var nb1 = Math.trunc(nb);
-            alert(nb1);
-            alert(nb1 * secondNumber.value);
+            if ((isNaN(firstNumber.value)) || (isNaN(secondNumber.value)))
+            {
+              alert("Veuillez entrer des nombres !");
+            }
+            else
+            {
+              // Première méthode : action détaillé ligne par ligne (avec alert pour vérifié)
+              var nb = firstNumber.value;
+              alert(firstNumber.value);
+              // Utilisation du Math.trunc() pour garder la partie entière du nombre
+              var nb1 = Math.trunc(nb);
+              alert(nb1);
+              alert(nb1 * secondNumber.value);
 
-
-            // Deuxième méthode : tout sur une ligne
-            alert (Math.trunc(firstNumber.value) * secondNumber.value);
+              // Deuxième méthode : tout sur une ligne
+              alert (Math.trunc(firstNumber.value) * secondNumber.value);
+            }
           }
         </script>
 
