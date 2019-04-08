@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercice 5</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <form>
+            <label for="firstNumber">Premier nombre : </label><input type="text" id="firstNumber" name="firstNumber"/><br/>
+            <label for="secondNumber">Deuxième nombre : </label><input type="text" id="secondNumber" name="secondNumber"/><br/>
+            <button  id="submit" name ="submit" onclick="multiEntier()">Valider</button>
+        </form>
+
+        <!-- Fonction prenant la partie entière du premier chiffre et la multiplie par le deuxième chiffre -->
+        <script type="text/javascript">
+          function multiEntier()
+          {
+            // Première méthode : action détaillé ligne par ligne (avec alert pour vérifié)
+            var nb = firstNumber.value;
+            alert(firstNumber.value);
+            // Utilisation du Math.trunc() pour garder la partie entière du nombre
+            var nb1 = Math.trunc(nb);
+            alert(nb1);
+            alert(nb1 * secondNumber.value);
+
+
+            // Deuxième méthode : tout sur une ligne
+            alert (Math.trunc(firstNumber.value) * secondNumber.value);
+          }
+        </script>
+
+    </body>
+</html>
